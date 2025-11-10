@@ -25,8 +25,8 @@ public class Ejercicio2_5 {
 
             for (int i = inicio; i < fin; i++) {
                 System.out.println("Soy el hilo " + hilo_id +
-                        " digo el num " + i +
-                        " y el cuadrado es " + (i * i));
+                        ", digo el num " + i +
+                        ", y el cuadrado es " + (i * i));
                 try { Thread.sleep(50); } catch (InterruptedException e) {}
             }
         }
@@ -46,8 +46,8 @@ public class Ejercicio2_5 {
         public void run() {
             for (int i = idHilo; i < trabajos; i += hilos) {
                 System.out.println("Soy el hilo " + idHilo +
-                        " digo el num " + i +
-                        " y el cuadrado es " + (i * i));
+                        ", digo el num " + i +
+                        ", y el cuadrado es " + (i * i));
                 try { Thread.sleep(50); } catch (InterruptedException e) {}
             }
         }
@@ -63,7 +63,7 @@ public class Ejercicio2_5 {
         System.out.print("Introduce el número de hilos: ");
         int hilos = sc.nextInt();
 
-        System.out.println("COMIENZA LA IMPLEMENTACIÓN POR BLOQUES");
+        System.out.println("\nCOMIENZA LA IMPLEMENTACIÓN POR BLOQUES");
 
         Thread[] hilosBloques = new Thread[hilos];
         for (int i = 0; i < hilos; i++) {
@@ -76,7 +76,7 @@ public class Ejercicio2_5 {
             try { hilosBloques[i].join(); } catch (InterruptedException e) {}
         }
 
-        System.out.println("COMIENZA LA IMPLEMENTACIÓN CÍCLICA");
+        System.out.println("\nCOMIENZA LA IMPLEMENTACIÓN CÍCLICA");
 
         Thread[] hilosCiclico = new Thread[hilos];
         for (int i = 0; i < hilos; i++) {
